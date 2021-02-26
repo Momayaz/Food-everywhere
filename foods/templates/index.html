@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <link rel="stylesheet" href="/foods/templates/index.css">
+    <title>home</title>
+</head>
+<body>
+    <header>
+        <a  href="/food/about">About</a>
+        <h1  style="text-align: center;"> Main Food Page</h1>
+        
+    </header>
+    <main>
+        <dev style="text-align: center;">
+
+        {% for item in list_item %}
+        <ul>
+            <li style="padding: 0%;">
+                <a href="{% url 'foods:detailsPage' item.id %}">{{item.food_name}}</a>
+            </li>
+           
+        </ul>
+        {% endfor %}
+        </dev>
+    </main>
+</body>
+</html>
