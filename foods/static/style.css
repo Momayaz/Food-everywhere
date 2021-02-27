@@ -1,0 +1,11 @@
+
+
+.food_list{
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    padding-top: 10px;
+    text-decoration: none;
+}

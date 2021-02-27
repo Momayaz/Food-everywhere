@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <title>Document</title>
 </head>
 <body>
     {% block body %}
-    <h1>About Page</h1>
-    <p>
-       This Application has made by Momayaz, as a full stack application from scratch.
-       Front end  and back end.
-
-    </p>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Save</button>
+    </form>
     {% endblock %}
+    
 </body>
 </html>
