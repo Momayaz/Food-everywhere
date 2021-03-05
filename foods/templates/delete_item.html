@@ -1,5 +1,17 @@
-<form method="POST">
-    {% csrf_token %}
-    <h1>Are you sure you want to delete {{ item.item.id}}</h1>
-    <button type="submit">confirmed</button>
-</form>
+{% extends 'base.html' %}
+
+{% block body %}
+<h2 class="alert alert-info" style="text-align: center;">Are you sure you want to delete {{ item.item.id}}</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-5">
+            <form method="POST">
+                {% csrf_token %}
+                <button  type="submit" class="btn btn-primary">confirmed</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

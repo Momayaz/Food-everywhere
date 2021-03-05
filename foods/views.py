@@ -16,8 +16,7 @@ def detailsPage(request,food_id):
     }
     return render(request, 'details.html', context)
 
-def aboutPage(request):
-    return render(request,'about.html')
+
 
 def create_item(request):
     form = ItemForm(request.POST or None)
@@ -46,3 +45,7 @@ def delete_item(request, id):
         return redirect('foods:homePage')
 
     return render(request, 'delete_item.html', {'item':item})
+
+def aboutPage(request):
+    return render(request,'about.html')
+

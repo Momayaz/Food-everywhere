@@ -18,12 +18,12 @@
                     <img class="card" height="250" width="400" src="{{ item.food_image }}" alt=""/>
                 </div>
                 <div class="col-md-4">
-                    <h2>{{ item.id }}=>{{item.food_name}}</h2>
+                    <h2>{{item.food_name}}</h2><hr>
                     <p>{{item.food_desc}}</p>
-                    <h3>{{item.food_price}}$</h3>
+                    <h5>Price: {{item.food_price}}$</h5>
                 </div>
                 <div class="col-md-2">
-                    <a href="{% url 'foods:detailsPage' item.id %}" class="btn btn-success" style="margin-top: 50%;">Detail</a>
+                    <a href="{% url 'foods:detailsPage' item.id %}" class="btn btn-info" style="margin-top: 50%;">Detail</a>
                 </div>
             </dev>
             

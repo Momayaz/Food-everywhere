@@ -1,5 +1,27 @@
-<form method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">LogIn</button>
-</form>
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4 offset-md-4" style="margin-top: 150px;">
+            <div class="card-header text-white bg-primary  border border-dark">
+                <div class="card-title" style=" font-size: 20px;">
+                    Foody Store
+                </div>
+            </div>
+            <div class="card-body border border-info">
+                <form method="POST">
+                    {% csrf_token %}
+                    {% for fields in form %}
+                    <div class="form-group" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+                        {{fields.name}}:{{fields}}
+                    </div>
+                    {% endfor %}
+                    <button class="btn-primary offset-md-5" style="margin-top: 10px;" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
